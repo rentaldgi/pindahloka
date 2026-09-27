@@ -13,25 +13,25 @@ export default function Navbar() {
   const navItems = [
     { label: 'Beranda', href: '/' },
     { label: 'Artikel', href: '/artikel' },
-    { label: 'Daftar Unit', href: '/DaftarUnit' },
+    { label: 'Layanan', href: '/DaftarUnit' },
     { label: 'Tentang Kami', href: '/TentangKami' },
     { label: 'Kontak', href: '/Kontak' },
   ]
 
   return (
-    <div className="bg-yellow-300 px-4 md:px-10 py-3 shadow-md sticky top-0 z-50">
+    <div className="bg-[#FCC729] px-4 md:px-10 py-3 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Image
-            src="/images/logo_pixel.png"
+            src="/images/logo.png"
             alt="Logo"
             width={32}
             height={32}
-            className="w-8 h-8"
+            className="w-12 h-8"
             priority
           />
-          <span className="text-black font-semibold text-lg">Pixelnesia</span>
+          <span className="text-black font-semibold text-lg">Pindahloka</span>
         </div>
 
         {/* Desktop Menu */}
@@ -65,7 +65,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-2 bg-yellow-200 px-4 py-2 rounded-md shadow-md">
+        <div className="md:hidden mt-2 bg-[#FCC729] px-4 py-2 rounded-md shadow-md">
           {navItems.map((item) => {
             const isActive = pathname.toLowerCase() === item.href.toLowerCase()
             return (

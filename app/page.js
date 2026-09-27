@@ -33,7 +33,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative bg-black text-white flex flex-col justify-between min-h-150 sm:min-h-175 md:min-h-150 px-3 sm:px-6 md:px-10 pt-6 sm:pt-10 pb-40 sm:pb-32 md:pb-10">
         <Image
-          src="/images/rentaiphone_bg.png"
+          src="/images/bg-1.png"
           alt="Scooter Hero"
           fill
           className="object-cover opacity-30"
@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="relative z-10 md:w-full flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto gap-4 sm:gap-6">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-4 sm:mb-6 md:mb-0">
             <Image
-              src="/images/iphone2+bayangan.png"
+              src="/images/logo 2.png"
               alt="Iphone dengan Bayangan"
               width={500}
               height={500}
@@ -53,18 +53,16 @@ export default function HomePage() {
 
           <div className="w-[90%] md:w-1/2 text-center md:text-right px-1 sm:px-4 md:px-0 md:pr-28 sm:mb-4 md:mb-0">
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold italic leading-tight">
-              Pixelnesia
+              Pindahloka
             </h1>
             <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-              Nikmati pengalaman menggunakan iPhone <br className="hidden sm:block" />
-              terbaru tanpa beban biaya mahal. Sewa mudah, <br className="hidden sm:block" />
-              cepat, dan aman
+              Jasa pindahan yang menyediakan layanan pindahan dengan harga terjangkau dan kualitas terbaik
             </p>
             <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-end gap-2">
-              <a href="/DaftarUnit" className="bg-yellow-300 text-black px-4 sm:px-6 py-2 md:rounded-l-full md:rounded-r-none rounded-full shadow hover:bg-gray-100 text-xs sm:text-sm md:text-base font-semibold">
-                Lihat Daftar Iphone
+              <a href="/DaftarUnit" className="bg-[#FCC729] text-black px-4 sm:px-6 py-2 md:rounded-l-full md:rounded-r-none rounded-full shadow hover:bg-gray-100 text-xs sm:text-sm md:text-base font-semibold">
+                Lihat Daftar Layanan
               </a>
-              <a href="/Kontak" className="bg-yellow-300 text-black px-4 sm:px-6 py-2 md:rounded-r-full md:rounded-l-none rounded-full shadow hover:bg-gray-100 text-xs sm:text-sm md:text-base font-semibold text-center">
+              <a href="/Kontak" className="bg-[#FCC729] text-black px-4 sm:px-6 py-2 md:rounded-r-full md:rounded-l-none rounded-full shadow hover:bg-gray-100 text-xs sm:text-sm md:text-base font-semibold text-center">
                 Hubungi Kami
               </a>
             </div>
@@ -77,7 +75,7 @@ export default function HomePage() {
               ["icon_pelayanan.png", "Pelayanan Terbaik"],
               ["icon_keamanan.png", "Keamanan Terjaga"],
               ["icon_perawatan.png", "Tersedia Diberbagai Kota"],
-              ["icon_truk.png", "Cash On Delivery"],
+              ["icon_truk.png", "Antar Kemana Saja"],
             ].map(([icon, label], i) => (
               <div key={i} className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
                 <Image src={`/images/${icon}`} alt={label} width={40} height={40} className="w-8 sm:w-10 h-8 sm:h-10" />
@@ -158,20 +156,20 @@ export default function HomePage() {
       <section className="bg-white py-8 sm:py-12 md:py-10 px-3 sm:px-6 md:px-12 lg:px-20 text-black">
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 w-[94%] mx-auto">
           <div className="flex-1 text-center lg:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Pixelnesia</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Pindahloka</h2>
               <h3 className="text-md sm:text-xl font-semibold mb-2 sm:mb-3">
-                Rental Iphone Indonesia
+                Jasa Pindahan Terpercaya
               </h3>
               <p className="text-sm sm:text-sm md:text-base leading-relaxed">
-                Sebagai bagian dari ekosistem layanan Dahlia Group, Pixelnesia hadir untuk menjawab kebutuhan masyarakat modern yang menginginkan akses mudah terhadap perangkat teknologi tanpa harus membeli. Pixelnesia menyediakan layanan rental Iphone yang fleksibel, ekonomis, dan terpercaya, cocok untuk berbagai kebutuhan pribadi maupun profesional.
+                Sebagai bagian dari keluarga besar Dahlia Group, Pindahloka hadir buat bantu kamu yang pengen urusan pindahan beres tanpa harus pusing atau ribet. Kami nyediain layanan pindahan yang fleksibel, ramah di kantong, dan pastinya bisa diandalkan, cocok banget buat kebutuhan personal maupun profesional kamu.
                 <br />
                 <br />
-                Melalui Pixelnesia, pelanggan dapat menikmati kemudahan dalam menyewa Iphone, mulai dari proses pemesanan yang cepat, pilihan perangkat terbaru yang terawat, hingga dukungan layanan pelanggan yang sigap dan informatif. Komitmen Dahlia Group dalam menghadirkan layanan unggulan tercermin dalam setiap aspek Pixelnesia, menjadikannya solusi cerdas untuk gaya hidup digital masa kini.
+                Soal layanan, kami punya solusi all-in-one yang disesuaikan sama kebutuhan kamu. Mulai dari jasa pindahan barang yang terjamin amannya, cleaning service menyeluruh—baik untuk pembersihan rutin, deep cleaning, sampai post-renovation—hingga paket bundling pindahan sekaligus pembersihan tempat lama dan baru. Jadi, kamu tinggal terima beres dan tempat barumu pun langsung siap huni tanpa effort lebih
               </p>
           </div>
           <div className="flex-1 w-full sm:max-w-sm">
             <Image
-              src="/images/image1+border.png"
+              src="/images/logo.png"
               alt="Produk Iphone"
               width={500}
               height={500}
@@ -181,21 +179,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-yellow-300 text-black px-3 sm:px-6 md:px-8 py-8 sm:py-12">
+      <section className="bg-[#FCC729] text-black px-3 sm:px-6 md:px-8 py-8 sm:py-12">
         <div className="w-[90%] md:w-[88%] mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center leading-tight">
             Kenapa Harus Memilih Pixelnesia?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             {[
-              ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"],
-              ["icon-verif.png", "Verifikasi Data Cepat dan Mudah"],
-              ["icon-kualitas.png", "Kualitas iPhone Terjamin dan Sudah Legal"],
-              ["icon-terbuka.png", "Terbuka untuk Semua Kalangan"],
-              ["icon-pembayaran.png", "Metode Pembayaran Aman dan Profesional"],
-              ["icon-cod.png", "Layanan Antar Jemput Fleksibel (COD)"],
-              ["icon-lokasi.png", "Tersedia di Berbagai Kota Besar di Indonesia"],
-              ["icon-data.png", "Data Pribadi Pelanggan Terjamin Aman"],
+              ["done.png", "Seluruh proses pindahan diurus sampai tuntas"],
+              ["relax.png", "Kamu bebas santai dan fokus pada kesibukanmu"],
+              ["team2.png", "Penanganan penuh oleh tim profesional"],
+              ["team1.png", "Tim jujur, berpengalaman, dan cekatan"],
+              ["money.png", "Harga transparan tanpa biaya tersembunyi"],
+              ["icon-cod.png", "Jadwal fleksibel menyesuaikan waktu kamu"],
+              ["time.png", "Hasil akhir dijamin rapi dan makin kinclong"],
+              ["comfort.png", "Mengutamakan kenyamanan pelanggan"],
             ].map(([icon, text], i) => (
               <div
                 key={i}
@@ -224,20 +222,28 @@ export default function HomePage() {
           }
         `}</style>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 sm:mb-5 leading-relaxed px-2">
-          Kami berkomitmen untuk menyediakan unit iPhone terbaik bagi setiap penyewa, <br className="hidden sm:block" />
-          karena kenyamanan, kepuasan, dan keamanan Anda adalah prioritas utama kami.
+          Kami berkomitmen untuk memberikan layanan pindahan yang aman, nyaman, dan terpercaya bagi pelanggan kami. Dengan pengalaman bertahun-tahun, tim profesional kami siap membantu Anda dalam setiap langkah proses pindahan, mulai dari perencanaan hingga pelaksanaan
         </p>
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-400 mb-10 sm:mb-8">
           NIKMATI MOMENT-MU
         </h1>
 
         <div className="overflow-hidden w-full mb-6 sm:mb-8 mt-6">
-          <div className="flex gap-4 sm:gap-6 w-max" style={{ animation: "scroll-loop 20s linear infinite" }}>
-            {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7].map((n, i) => (
+          <div className="flex gap-4 sm:gap-6 animate-scroll-loop" style={{ animation: 'scroll-loop 20s linear infinite' }}>
+            {[
+              "clean.png",
+              "relax.png",
+              "team1.png",
+              "money.png",
+              "done.png",
+              "team2.png",
+              "comfort.png",
+              "time.png",
+            ].map((src, i) => (
               <Image
                 key={i}
-                src={`/images/handphone${n}.png`}
-                alt={`handphone ${n}`}
+                src={`/images/${src}`}
+                alt={`Showcase ${i + 1}`}
                 width={100}
                 height={100}
                 className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
@@ -248,9 +254,9 @@ export default function HomePage() {
 
         <a
           href="/DaftarUnit"
-          className="bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow hover:bg-gray-100 text-xs sm:text-sm md:text-base font-semibold mt-8 inline-block"
+          className="bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow hover:bg-[#FCC729] text-xs sm:text-sm md:text-base font-semibold mt-8 inline-block"
         >
-          Lihat Daftar Iphone Pixelnesia
+          Lihat Daftar Layanan
         </a>
       </section>
 

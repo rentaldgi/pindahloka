@@ -8,6 +8,30 @@ import Image from 'next/image';
 import { generateWhatsAppLink } from "@/data/adminContacts";
 import { HiArrowLeft } from "react-icons/hi";
 
+const addOns = [
+  { name: "Packing Kayu Premium", price: "150.000" },
+  { name: "Bongkar & Pasang Lemari", price: "200.000" },
+  { name: "Helper Tambahan", price: "250.000" },
+];
+
+const insuranceOptions = [
+  {
+    name: "Asuransi Basic",
+    price: "150.000",
+    coverage: "Proteksi dasar untuk barang ringan dan kebutuhan pindahan sederhana.",
+  },
+  {
+    name: "Asuransi Standard",
+    price: "300.000",
+    coverage: "Cakupan menengah untuk furnitur dan barang rumah tangga penting.",
+  },
+  {
+    name: "Asuransi Premium",
+    price: "500.000",
+    coverage: "Perlindungan maksimal untuk barang bernilai tinggi dan peralatan sensitif.",
+  },
+];
+
 export default function DetailUnit() {
   const { id } = useParams();
   const unit = iphoneUnits.find((item) => item.id === parseInt(id));
@@ -51,30 +75,13 @@ export default function DetailUnit() {
           <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
             {unit.description}
           </p>
-          {/* <hr className="my-2 border-black" /> */}
-
           {/* Tags */}
           <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
-            {/* {unit.weight && (
-              <span className="border border-yellow-500 px-4 py-1 rounded-full">
-                {unit.weight}
-              </span>
-            )} */}
             {unit.daerah && (
               <span className="border border-yellow-500 px-2 sm:px-4 py-1 rounded-full text-xs sm:text-sm">
                 {unit.daerah}
               </span>
             )}
-            {/* {unit.Penyimpanan && (
-              <span className="border border-yellow-500 px-2 sm:px-4 py-1 rounded-full text-xs sm:text-sm">
-                {unit.Penyimpanan}
-              </span>
-            )} */}
-            {/* {unit.role && (
-              <span className="border border-yellow-500 px-4 py-1 rounded-full">
-                {unit.role}
-              </span>
-            )} */}
           </div>
 
           {/* Harga */}
@@ -91,20 +98,7 @@ export default function DetailUnit() {
                 <span className="text-sm sm:text-base leading-tight">
                   Rp {unit.weekdayPrice}
                 </span>
-                {/* <span className="text-[10px] sm:text-xs text-gray-600 font-normal">
-                  Weekday
-                </span> */}
               </div>
-
-              {/* <div className="flex flex-col">
-              <span className="text-[10px] sm:text-xs text-gray-600 font-normal">
-                  Mulai dari
-                </span>
-                <span className="text-sm sm:text-base leading-tight">
-                  Rp {unit.weekendPrice}
-                </span>
-                
-              </div> */}
             </div>
           </div>
 
@@ -125,93 +119,50 @@ export default function DetailUnit() {
 
           {/* Tombol Sewa */}
           <div className="pt-2">
-              <a
-                href={generateWhatsAppLink(unit)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 w-full rounded-full shadow text-sm sm:text-base">
-                  Sewa Sekarang
-                </button>
-
-              </a>
-            </div>
+            <a
+              href={generateWhatsAppLink(unit)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 w-full rounded-full shadow text-sm sm:text-base">
+                Sewa Sekarang
+              </button>
+            </a>
           </div>
-        </div>
-
-      {/* Info bawah */}
-      {/* <div className="bg-yellow-300 text-black py-6 sm:py-10">
-        <div className="w-[94%] mx-auto px-4 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm"> */}
-          
-          {/* Text */}
-          {/* <div className="space-y-3 sm:space-y-4 leading-relaxed">
-            <p>
-              Unit iPhone yang kami sediakan hadir dengan kondisi fisik mulus dan performa optimal.
-              Semua perangkat menggunakan baterai yang sehat, respons layar yang baik, serta siap digunakan kapan saja.
-            </p>
-            <p>
-              Semua unit sudah dilengkapi dengan surat-surat resmi dan rutin diservis agar aman dan nyaman digunakan.
-            </p>
-            <p>
-              Sangat cocok untuk mobilitas harian, perjalanan, maupun kebutuhan kerja.
-            </p>
-            <p>
-            </p>
-            <p>
-            - Pixelnesia
-            </p>
-          </div> */}
-
-          {/* Tabel */}
-          {/* <div className="flex justify-center md:justify-end items-start">
-        <div className="bg-white text-black rounded-md w-full max-w-md shadow-md overflow-hidden">
-          <table className="w-full border-collapse text-xs sm:text-sm">
-            <tbody>
-              <tr className="border-gray-100">
-                <td className="px-3 sm:px-4 py-3 font-semibold whitespace-nowrap">
-                  Penyimpanan
-                </td>
-                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-                  {unit.Penyimpanan}
-                </td>
-              </tr>
-
-              <tr className="bg-gray-100 border-gray-100">
-                <td className="px-3 sm:px-4 py-3 font-semibold">
-                  Warna
-                </td>
-                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-                  {unit.Warna}
-                </td>
-              </tr>
-
-              <tr className="border-gray-100">
-                <td className="px-3 sm:px-4 py-3 font-semibold">
-                  Jaringan
-                </td>
-                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-                  {unit.jaringan}
-                </td>
-              </tr>
-
-              <tr className="bg-gray-100">
-                <td className="px-3 sm:px-4 py-3 font-semibold">
-                  Kamera
-                </td>
-                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-                  {unit.kamera}
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
 
+      <div className="w-[96%] mx-auto pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-3 rounded-2xl border border-yellow-200 bg-yellow-50 p-5">
+            <span className="font-semibold text-black text-lg">Add Ons</span>
+            <div className="space-y-2 text-sm text-gray-700">
+              {addOns.map((addon, idx) => (
+                <div key={idx} className="flex items-center justify-between gap-3 border-b border-yellow-100 pb-2 last:border-b-0 last:pb-0">
+                  <span>{addon.name}</span>
+                  <span className="font-semibold text-black">Rp {addon.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
-  </div>
-</div> */}
-
+          <div className="flex flex-col gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <span className="font-semibold text-black text-lg">Jenis Asuransi</span>
+            <div className="space-y-3 text-sm text-gray-700">
+              {insuranceOptions.map((insurance, idx) => (
+                <div key={idx} className="rounded-xl border border-emerald-100 bg-white/70 p-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="font-semibold text-black">{insurance.name}</span>
+                    <span className="font-semibold text-emerald-700">Rp {insurance.price}</span>
+                  </div>
+                  <p className="mt-1 text-xs text-gray-600">{insurance.coverage}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </div>
