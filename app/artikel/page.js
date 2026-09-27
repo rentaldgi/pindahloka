@@ -94,13 +94,14 @@ export default function Artikel() {
             
             {/* Text */}
             <div className="flex-1 text-center lg:text-left w-[90%] mx-auto lg:mx-0">
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">
-                ARTIKEL KAMI
-              </h1>
-              <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Pixelnesia aktif menginformasikan berbagai kegiatan untuk meningkatkan kualitas layanan di bidang rental melalui Artikel
-              </p>
-            </div>
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">
+              ARTIKEL KAMI
+            </h1>
+            <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              {/* Ubah teks ini sesuai layanan Pindahloka */}
+              Pindahloka aktif menginformasikan berbagai tips seputar jasa pindahan, angkut barang, dan cleaning melalui artikel.
+            </p>
+          </div>
 
             {/* Search */}
             <div className="w-[90%] mx-auto lg:mx-0 lg:w-75 md:mt-10">

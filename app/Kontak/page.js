@@ -15,7 +15,7 @@ const Kontak = () => {
     telepon: "",
     email: "",
     pesan: "",
-    source: "Website Sewa Apartemen",
+    source: "Website PindahLoka",
   });
 
   const [errors, setErrors] = useState({});
@@ -68,7 +68,7 @@ const Kontak = () => {
           telepon: "",
           email: "",
           pesan: "",
-          source: "Website Sewa Apartemen",
+          source: "Website PindahLoka",
         });
       } else {
         setNotif({ message: result.message || "Gagal mengirim pesan", type: "error" });
@@ -108,8 +108,9 @@ const Kontak = () => {
               Kontak Kami
             </h2>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              Punya pertanyaan atau ingin melakukan pemesanan? Jangan ragu untuk
-              menghubungi kami. Kami siap membantu kebutuhan Anda seputar penyewaan
+              Punya pertanyaan atau membutuhkan bantuan? Jangan ragu untuk menghubungi
+              PindahLoka. Kami siap membantu berbagai kebutuhan Anda, mulai dari jasa
+              angkat barang, cleaning, hingga pindahan.
             </p>
           </div>
         </div>
@@ -201,16 +202,17 @@ const Kontak = () => {
             <div className="w-full md:w-1/2 text-left">
               <h2 className="md:text-3xl text-xl sm:text-4xl font-bold leading-tight mb-4 text-center md:text-left">
                 Mari Kunjungi <br />
-                Sosial Media Pixelnesia
+                Sosial Media Pindahloka
               </h2>
               <p className="text-md text-gray-200 max-w-lg text-center md:text-left">
-                Dapatkan update promo, unit terbaru, dan informasi menarik lainnya.
+                Dapatkan informasi layanan, tips, dan update terbaru seputar angkat barang,
+                cleaning, dan pindahan bersama PindahLoka.
               </p>
             </div>
 
             {/* Kanan - Dropdown */}
             <div className="w-full md:w-auto md:ml-auto">
-              <SosialMediaDropdown entity="RENTAL_IPHONE" />
+              <SosialMediaDropdown entity="PINDAHLOKA" />
             </div>
 
           </div>

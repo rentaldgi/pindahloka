@@ -39,7 +39,7 @@ export default function Footer() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/6285899899948"
+              href="https://wa.me/6285134688201"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -66,29 +66,25 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><Link href="/"><span className="hover:text-yellow-500 cursor-pointer">Beranda</span></Link></li>
               <li><Link href="/DaftarUnit"><span className="hover:text-yellow-500 cursor-pointer">Artikel</span></Link></li>
-              <li><Link href="/DaftarUnit"><span className="hover:text-yellow-500 cursor-pointer">Daftar Iphone</span></Link></li>
-              <li><Link href="/Testimoni"><span className="hover:text-yellow-500 cursor-pointer">Testimoni</span></Link></li>
+              <li><Link href="/DaftarUnit"><span className="hover:text-yellow-500 cursor-pointer">Layanan</span></Link></li>
+              <li><Link href="/TentangKami"><span className="hover:text-yellow-500 cursor-pointer">Tentang Kami</span></Link></li>
               <li><Link href="/Kontak"><span className="hover:text-yellow-500 cursor-pointer">Kontak</span></Link></li>
             </ul>
           </div>
 
-          <div>
+          <div className="space-y-2">
             <h4 className="font-semibold text-gray-800 mb-2">Kontak Kami</h4>
             <p>
-              <a href="mailto:ptdahliglobalindo@gmail.com" className="hover:text-yellow-500">
-                dahliagroup.id
+              <a href="https://instagram.com/pindahloka" className="hover:text-yellow-500">
+                pindahloka
               </a>
             </p>
             <p>
-              <a href="https://wa.me/6285899899948" className="hover:text-yellow-500">
-                (+62) 858-9989-9948  
+              <a href="https://wa.me/6285134688201" className="hover:text-yellow-500">
+              (+62) 851-3468-8201
               </a>
             </p>
-            <Link href="/Kontak">
-              <button className="bg-yellow-400 hover:bg-yellow-500 transition mt-2 text-sm font-medium px-4 py-2 rounded-full">
-                Lihat Kontak Lainnya
-              </button>
-            </Link>
+            
           </div>
         </div>
 
@@ -102,14 +98,10 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-yellow-500"
             >
-              Jl. Paseban Raya No.83, RT.1/RW.7, Paseban, Kec. Senen, Kota Jakarta Pusat, DKI Jakarta 10440
-            </a>
+             Jl Raya Penggilingan Rt 013/007 No 250, RT.13/RW.7, Penggilingan, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13940
+             </a>
           </p>
-          <Link href="/Kontak">
-            <button className="bg-yellow-400 hover:bg-yellow-500 transition mt-2 text-sm font-medium px-4 py-2 rounded-full">
-              Lihat Alamat Lainnya
-            </button>
-          </Link>
+         
         </div>
       </div>
 
