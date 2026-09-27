@@ -5,7 +5,7 @@ export const BASE_URL = (
   process.env.NEXT_PUBLIC_API_URL || "https://backend.ptdahliaglobalindo.id"
 ).replace(/\/+$/, "");
 
-export const ENTITY = "RENTAL_IPHONE";
+export const ENTITY = "PINDAHLOKA";
 
 // Request ke backend, contoh: apiFetch("/article?entity=" + ENTITY)
 export function apiFetch(path, options = {}) {

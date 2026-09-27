@@ -18,11 +18,21 @@ function formatTanggalIndo(tanggalString) {
 export default function HomePage() {
   const [articles, setArticles] = useState([]);
 
-  useEffect(() => {
+useEffect(() => {
     apiFetch(`/article?entity=${ENTITY}`)
       .then((res) => res.json())
       .then((data) => {
-        setArticles(data.slice(0, 3)); // Ambil 3 artikel pertama
+        if (Array.isArray(data)) {
+          setArticles(data.slice(0, 3)); // Ambil 3 artikel pertama
+        } else if (data && Array.isArray(data.data)) {
+          setArticles(data.data.slice(0, 3)); // Jaga-jaga kalau dibungkus dalam { data: [...] }
+        } else {
+          setArticles([]); // Jika bukan array, set jadi array kosong biar tidak error
+        }
+      })
+      .catch((err) => {
+        console.error("Gagal fetch artikel:", err);
+        setArticles([]); // Amankan juga jika terjadi error jaringan
       });
   }, []);
 

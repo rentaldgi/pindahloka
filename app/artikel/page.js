@@ -20,10 +20,17 @@ export default function Artikel() {
     apiFetch(`/article?entity=${ENTITY}`)
       .then((res) => res.json())
       .then((data) => {
-        setArticles(data);
+        if (Array.isArray(data)) {
+          setArticles(data);
+        } else if (data && Array.isArray(data.data)) {
+          setArticles(data.data); // Jaga-jaga kalau dibungkus dalam { data: [...] }
+        } else {
+          setArticles([]); // Kalau formatnya bukan array, set jadi array kosong
+        }
       })
       .catch((err) => {
         console.error("Gagal fetch artikel:", err);
+        setArticles([]); // Kalau error, amankn jadi array kosong biar tidak crash
       })
       .finally(() => setLoading(false));
   }, []);
