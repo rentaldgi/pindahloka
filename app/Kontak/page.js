@@ -117,7 +117,7 @@ const Kontak = () => {
       </section>
 
       {/* Form */}
-      <section className="bg-[#EECE21] mt-12 px-6 md:px-20 py-14">
+      <section className="bg-[#FCC729] mt-12 px-6 md:px-20 py-14">
         <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <form onSubmit={handleSubmit} className="space-y-5 z-20 w-full md:w-[80%] md:justify-self-start">
             <div className="flex flex-col md:flex-row gap-4">

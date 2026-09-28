@@ -97,7 +97,7 @@ useEffect(() => {
       </section>
 
       {/* Section Artikel Terbaru */}
-      <section className="bg-[#FFDD00] px-3 sm:px-6 md:px-12 lg:px-20 py-8 sm:py-12">
+      <section className="bg-[#FCC729] px-3 sm:px-6 md:px-12 lg:px-20 py-8 sm:py-12">
         <div className="w-[94%] mx-auto flex flex-col lg:flex-row gap-4 sm:gap-6">
           {articles[0] && (
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-2/3 h-auto lg:h-150 sm:h-125 overflow-hidden flex flex-col">
@@ -231,12 +231,14 @@ useEffect(() => {
             100% { transform: translateX(-50%); }
           }
         `}</style>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 sm:mb-5 leading-relaxed px-2">
-          Kami berkomitmen untuk memberikan layanan pindahan yang aman, nyaman, dan terpercaya bagi pelanggan kami. Dengan pengalaman bertahun-tahun, tim profesional kami siap membantu Anda dalam setiap langkah proses pindahan, mulai dari perencanaan hingga pelaksanaan
-        </p>
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-400 mb-10 sm:mb-8">
-          NIKMATI MOMENT-MU
-        </h1>
+        <div className="max-w-6xl mx-auto">
+          <p className="text-base sm:text-sm md:text-md lg:text-lg mb-4 sm:mb-5 leading-relaxed px-2 max-w-5xl mx-auto">
+            Kami berkomitmen untuk memberikan layanan pindahan yang aman, nyaman, dan terpercaya bagi pelanggan kami. Dengan pengalaman bertahun-tahun, tim profesional kami siap membantu Anda dalam setiap langkah proses pindahan, mulai dari perencanaan hingga pelaksanaan
+          </p>
+          <h1 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-[#FCC729] mb-10 sm:mb-8">
+            NIKMATI MOMENT-MU
+          </h1>
+        </div>
 
         <div className="overflow-hidden w-full mb-6 sm:mb-8 mt-6">
           <div className="flex gap-4 sm:gap-6 animate-scroll-loop" style={{ animation: 'scroll-loop 20s linear infinite' }}>
@@ -256,7 +258,7 @@ useEffect(() => {
                 alt={`Showcase ${i + 1}`}
                 width={100}
                 height={100}
-                className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
+                className="h-12 sm:h-16 md:h-18 lg:h-20 w-auto"
               />
             ))}
           </div>

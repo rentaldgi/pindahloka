@@ -9,41 +9,32 @@ import { iphoneUnits } from '../../data/units';
 export default function DaftarUnit() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showFilter, setShowFilter] = useState(false);
-  const [filters, setFilters] = useState({ harga: '', daerah: '', Penyimpanan: '', Warna: '' });
+  const [filters, setFilters] = useState({ harga: '' });
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
-  const hasActiveFilter = Object.values(filters).some(v => v);
 
+  const formatHarga = (value) =>
+    new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      maximumFractionDigits: 0,
+    }).format(Number(value));
 
-  const filterByHarga = (harga, selected) => {
-    const h = parseInt(harga);
-    if (selected === "low") return h >= 50000 && h <= 100000;
-    if (selected === "mid") return h > 100000 && h <= 150000;
-    if (selected === "high") return h > 150000;
-    return true;
-  };
+  const priceOptions = [...new Set(iphoneUnits.map((unit) => String(unit.harga)))]
+    .sort((a, b) => Number(a) - Number(b))
+    .map((harga) => ({
+      value: harga,
+      label: formatHarga(harga),
+    }));
 
   const filteredUnits = iphoneUnits.filter((unit) => {
     const textMatch =
       unit.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       unit.description.toLowerCase().includes(searchTerm.toLowerCase());
 
-    const hargaMatch = filterByHarga(unit.harga, filters.harga);
-    const daerahMatch =
-  !filters.daerah ||
-  (Array.isArray(unit.daerah)
-    ? unit.daerah.includes(filters.daerah)
-    : unit.daerah === filters.daerah);
+    const hargaMatch = !filters.harga || String(unit.harga) === filters.harga;
 
-const PenyimpananMatch =
-  !filters.Penyimpanan ||
-  (Array.isArray(unit.Penyimpanan)
-    ? unit.Penyimpanan.includes(filters.Penyimpanan)
-    : unit.Penyimpanan === filters.Penyimpanan);
-
-    const WarnaMatch = !filters.Warna || unit.Warna === filters.Warna;
-
-    return textMatch && hargaMatch && daerahMatch && PenyimpananMatch && WarnaMatch;
+    return textMatch && hargaMatch;
   });
 
   const totalPages = Math.ceil(filteredUnits.length / itemsPerPage);
@@ -101,40 +92,23 @@ const PenyimpananMatch =
 
         {/* Filter Dropdown */}
         {showFilter && (
-          <div className="relative z-20 mt-4 w-full max-w-6xl bg-white bg-opacity-10 rounded-lg md:rounded-full shadow-lg p-4">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {/* Harga Range */}
+          <div className="relative z-20 mt-4 w-full max-w-xl bg-white bg-opacity-10 rounded-lg shadow-lg p-4">
+            <div className="grid grid-cols-1 gap-4">
               <select
                 className="min-w-[150px] bg-white text-black border border-black px-4 py-2 rounded-full shadow focus:outline-none w-full"
                 value={filters.harga}
                 onChange={(e) => {
-                  setFilters({ ...filters, harga: e.target.value });
+                  setFilters({ harga: e.target.value });
                   setCurrentPage(1);
                 }}
               >
-                <option value="">Harga</option>
-                <option value="low">50k++</option>
-                <option value="mid">100k++</option>
-                <option value="high">150k++</option>
+                <option value="">Semua Harga</option>
+                {priceOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
               </select>
-
-              {/* Dropdown lain */}
-              {['daerah', 'Penyimpanan', 'Warna'].map((label) => (
-                <select
-                  key={label}
-                  className="min-w-[150px] bg-white text-black border border-black px-4 py-2 rounded-full shadow focus:outline-none w-full"
-                  value={filters[label] || ''}
-                  onChange={(e) => {
-                    setFilters({ ...filters, [label]: e.target.value });
-                    setCurrentPage(1);
-                  }}
-                >
-                  <option value="">{label.charAt(0).toUpperCase() + label.slice(1)}</option>
-                  {[...new Set(iphoneUnits.flatMap((u) => Array.isArray(u[label]) ? u[label] : [u[label]]).filter(Boolean))].map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </select>
-              ))}
             </div>
           </div>
         )}
@@ -151,6 +125,7 @@ const PenyimpananMatch =
               name={unit.name}
               description={unit.description}
               image={unit.image}
+              price={unit.harga}
               role={unit.role}
             />
           ))}

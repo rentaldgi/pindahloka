@@ -6,46 +6,34 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const testimonials = [
+const aboutCards = [
   {
-    video: "/videos/testimoni-pixel-1.mp4",
-    name: "Fasilitas",
-    text: "Nikmati fasilitas lengkap untuk pengalaman sewa yang lebih nyaman, mulai dari charger hingga earphone yang tersedia bersama unit iPhone.",
+    image: "/images/foto1.jpeg",
+    name: "Pindahloka",
+    text: "Menjadi mitra pilihan utama dalam layanan pindahan yang aman, cepat, dan nyaman bagi setiap keluarga maupun bisnis.",
   },
   {
-    video: "/videos/testimoni-pixel-2.mp4",
-    name: "Tipe iPhone",
-    text: "Tersedia berbagai pilihan tipe iPhone yang dapat disesuaikan dengan kebutuhan, mulai dari penggunaan sehari-hari hingga kebutuhan konten.",
+    image: "/images/foto2.jpeg",
+    name: "Pindahloka",
+    text: "Menyediakan solusi pindahan yang praktis, terorganisir, dan profesional dengan pelayanan yang ramah serta transparan.",
   },
   {
-    video: "/videos/testimoni-pixel-6.mp4",
-    name: "Cabang Utama",
-    text: "Kunjungi cabang utama Pixelnesia untuk proses pengambilan dan pengembalian unit yang mudah, cepat, dan praktis.",
+    image: "/images/foto3.jpeg",
+    name: "Pindahloka",
+    text: "Memberikan pengalaman pindahan dengan tim yang berpengalaman, perlindungan barang yang maksimal, dan hasil yang rapi.",
   },
 ];
-// {
-//   video: "/videos/testimoni-pixel-3.mp4",
-//   text: "Harga rental iPhone di Pixelnesia bener-bener bersahabat buat mahasiswa. iPhone-nya lancar banget dan baterai irit.",
-// },
-// {
-//   video: "/videos/testimoni-pixel-4.mp4",
-//   text: "Sewa iPhone buat tugas kuliah dan foto-foto, hasilnya jernih! Proses sewa mudah, tinggal klik di website Pixelnesia.",
-// },
-// {
-//   video: "/videos/testimoni-pixel-5.mp4",
-//   text: "Jalan-jalan di kota jadi makin seru pake iPhone dari Pixelnesia. Kameranya oke, performa kenceng, puas banget!",
-// },
 
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? aboutCards.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === aboutCards.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -60,43 +48,29 @@ export default function Testimonials() {
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 py-16">
-        {/* Judul HP */}
-        <h2 className="text-2xl md:hidden font-bold text-center mb-6">
-          Kata Mereka Tentang Pixelnesia
-        </h2>
-
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
-          {/* Box Besar */}
-          <div className="relative w-[90%] max-w-sm md:w-full md:max-w-md">
-            <div className="bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col h-[400px]">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-10">
+          <div className="relative w-full max-w-sm md:w-full md:max-w-md">
+            <div className="bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col gap-3 h-auto">
               <div className="relative rounded-xl overflow-hidden aspect-video">
-                <video
-                  src={testimonials[currentIndex].video}
-                  controls
-                  className="w-full h-full object-cover"
-                ></video>
+                <Image
+                  src={aboutCards[currentIndex].image}
+                  alt={aboutCards[currentIndex].name}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div className="flex items-center mt-3 justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="text-md font-semibold">{testimonials[currentIndex].name}</div>
-                  {/* <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
-                    {testimonials[currentIndex].role}
-                  </div> */}
-                </div>
-              </div>
-              <div className="flex items-start justify-between mt-2 gap-4">
-                <p className="text-sm text-gray-700 flex-1">{testimonials[currentIndex].text}</p>
+              <div className="flex items-start justify-between gap-4">
+                <p className="text-sm text-gray-700 leading-relaxed flex-1">{aboutCards[currentIndex].text}</p>
                 <Image
                   src="/images/logo_pixel.png"
                   alt="Logo"
                   width={56}
                   height={56}
-                  className="h-14 object-contain"
+                  className="h-14 object-contain shrink-0"
                 />
               </div>
             </div>
 
-            {/* Tombol Navigasi Desktop */}
             <button
               onClick={handlePrev}
               className="hidden md:block absolute -left-12 top-1/2 -translate-y-1/2 bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500"
@@ -111,52 +85,38 @@ export default function Testimonials() {
             </button>
           </div>
 
-          {/* Judul & Box Kecil */}
           <div className="flex flex-col items-start w-full md:w-auto">
-            {/* Judul Desktop */}
-            <h2 className="hidden md:block text-4xl font-bold text-white ml-2 md:ml-8 mb-4">
-              Kata Mereka Tentang Pixelnesia
-            </h2>
-
             <div className="hidden md:flex mt-2 flex-col md:flex-row gap-8 md:ml-8">
               {[
-                testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length],
-                testimonials[(currentIndex + 1) % testimonials.length],
+                aboutCards[(currentIndex - 1 + aboutCards.length) % aboutCards.length],
+                aboutCards[(currentIndex + 1) % aboutCards.length],
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="w-[90%] max-w-sm md:w-80 bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col"
+                  className="w-full max-w-sm md:w-80 bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col gap-3 h-auto"
                 >
                   <div className="relative rounded-xl overflow-hidden aspect-video">
-                    <video
-                      src={item.video}
-                      controls
-                      className="w-full h-full object-cover"
-                    ></video>
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <div className="flex items-center mt-3 justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="text-md font-semibold">{item.name}</div>
-                      {/* <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
-                        {item.role}
-                      </div> */}
-                    </div>
-                  </div>
-                  <div className="flex items-start justify-between mt-2 gap-4">
-                    <p className="text-sm text-gray-700 flex-1">{item.text}</p>
+                  <div className="flex items-start justify-between gap-4">
+                    <p className="text-sm text-gray-700 flex-1 leading-relaxed">{item.text}</p>
                     <Image
                       src="/images/logo_pixel.png"
                       alt="Logo"
                       width={56}
                       height={56}
-                      className="h-14 object-contain"
+                      className="h-14 object-contain shrink-0"
                     />
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Tombol Navigasi HP */}
             <div className="flex justify-center gap-4 mt-6 md:hidden w-full">
               <button
                 onClick={handlePrev}
