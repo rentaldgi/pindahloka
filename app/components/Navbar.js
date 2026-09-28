@@ -26,9 +26,9 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Logo"
-            width={64}
-            height={48}
-            className="w-16 h-10 sm:w-20 sm:h-12 object-contain"
+            width={32}
+            height={32}
+            className="w-12 h-8"
             priority
           />
           <span className="text-black font-semibold text-lg">Pindahloka</span>
