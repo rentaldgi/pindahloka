@@ -49,7 +49,7 @@ export default function Footer() {
 
 
           {/* Logo Bank */}
-          <div className="mt-0 bg-[#FCC729] py-2 px-4 rounded-full flex flex-wrap items-center justify-center gap-4 shadow-md z-10 w-fit md:w-auto">
+          <div className="mt-0 bg-[#FFDD00] py-2 px-4 rounded-full flex flex-wrap items-center justify-center gap-4 shadow-md z-10 w-fit md:w-auto">
             <Image src="/images/pm_bni.png" alt="BNI" width={24} height={24} className="w-8 h-8 object-contain" />
             <Image src="/images/pm_bca.png" alt="BCA" width={24} height={24} className="w-8 h-8 object-contain" />
             <Image src="/images/pm_mandiri.png" alt="Mandiri" width={24} height={24} className="w-8 h-8 object-contain" />
@@ -66,29 +66,25 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><Link href="/"><span className="hover:text-yellow-500 cursor-pointer">Beranda</span></Link></li>
               <li><Link href="/DaftarUnit"><span className="hover:text-yellow-500 cursor-pointer">Artikel</span></Link></li>
-              <li><Link href="/DaftarUnit"><span className="hover:text-yellow-500 cursor-pointer">Daftar Iphone</span></Link></li>
-              <li><Link href="/Testimoni"><span className="hover:text-yellow-500 cursor-pointer">Testimoni</span></Link></li>
+              <li><Link href="/DaftarUnit"><span className="hover:text-yellow-500 cursor-pointer">Layanan</span></Link></li>
+              <li><Link href="/TentangKami"><span className="hover:text-yellow-500 cursor-pointer">Tentang Kami</span></Link></li>
               <li><Link href="/Kontak"><span className="hover:text-yellow-500 cursor-pointer">Kontak</span></Link></li>
             </ul>
           </div>
 
-          <div>
+          <div className="space-y-1">
             <h4 className="font-semibold text-gray-800 mb-2">Kontak Kami</h4>
             <p>
-              <a href="mailto:ptdahliglobalindo@gmail.com" className="hover:text-yellow-500">
-                dahliagroup.id
+              <a href="https://instagram.com/pindahloka" className="hover:text-yellow-500">
+                pindahloka
               </a>
             </p>
             <p>
-              <a href="https://wa.me/6285134688201 " className="hover:text-yellow-500">
-                (+62) 851-3468-8201
+              <a href="https://wa.me/6285134688201" className="hover:text-yellow-500">
+              (+62) 851-3468-8201
               </a>
             </p>
-            {/* <Link href="/Kontak">
-              <button className="bg-yellow-400 hover:bg-yellow-500 transition mt-2 text-sm font-medium px-4 py-2 rounded-full">
-                Lihat Kontak Lainnya
-              </button>
-            </Link> */}
+            
           </div>
         </div>
 
@@ -97,24 +93,20 @@ export default function Footer() {
           <h4 className="font-semibold text-gray-800 mb-2">Alamat</h4>
           <p>
             <a
-              href="https://www.google.com/maps/place/Jl.+Raya+Penggilingan+No.250,+RT.13%2FRW.7,+Penggilingan,+Kec.+Cakung,+Kota+Jakarta+Timur,+Daerah+Khusus+Ibukota+Jakarta+13940/@-6.214123,106.940123,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f5c8f9c8f9c8:0x8f9c8f9c8f9c8f9c!8m2!3d-6.214123!4d106.942311!16s%2Fg%2F11b6v7k5k?entry=ttu"
+              href="https://www.google.com/maps?q=Jl.+PSM+RW+No.36,+Kebun+Jayanti,+Bandung"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-500"
             >
-              Jl Raya Penggilingan Rt 013/007 No 250, RT.13/RW.7, Penggilingan, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13940
-            </a>
+             Jl Raya Penggilingan Rt 013/007 No 250, RT.13/RW.7, Penggilingan, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13940
+             </a>
           </p>
-          {/* <Link href="/Kontak">
-            <button className="bg-yellow-400 hover:bg-yellow-500 transition mt-2 text-sm font-medium px-4 py-2 rounded-full">
-              Lihat Alamat Lainnya
-            </button>
-          </Link> */}
+         
         </div>
       </div>
 
       {/* Footer bawah */}
-      <div className="bg-[#FCC729] justify-center items-center flex py-4">
+      <div className="bg-[#FFDD00] justify-center items-center flex py-4">
         <p className="w-[90%] text-center text-xs text-black font-medium"> © 2026 Dahlia Group. Seluruh hak cipta dilindungi undang-undang </p>
       </div>
     </footer>
