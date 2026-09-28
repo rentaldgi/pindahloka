@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-white text-black overflow-hidden border-t-2 border-yellow-100 shadow-md">
       {/* Ornamen kiri atas */}
-      <div className="absolute top-0 left-0 z-0 w-32 sm:w-40 md:w-[300px] lg:w-[400px]">
+      {/* <div className="absolute top-0 left-0 z-0 w-32 sm:w-40 md:w-[300px] lg:w-[400px]">
         <Image
           src="/images/logo_footer1.png"
           alt="Ornamen Kiri"
@@ -16,10 +16,10 @@ export default function Footer() {
           height={200}
           className="object-contain"
         />
-      </div>
+      </div> */}
 
       {/* Ornamen kanan atas */}
-      <div className="absolute top-0 right-0 z-0 w-24 sm:w-32 md:w-40 lg:w-52">
+      {/* <div className="absolute top-0 right-0 z-0 w-24 sm:w-32 md:w-40 lg:w-52">
         <Image
           src="/images/logo_footer.png"
           alt="Ornamen Kanan"
@@ -28,7 +28,7 @@ export default function Footer() {
           height={200}
           className="object-contain"
         />
-      </div>
+      </div> */}
 
       {/* Isi utama */}
       <div className="relative z-10 w-[94%] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -49,7 +49,7 @@ export default function Footer() {
 
 
           {/* Logo Bank */}
-          <div className="mt-0 bg-[#FFDD00] py-2 px-4 rounded-full flex flex-wrap items-center justify-center gap-4 shadow-md z-10 w-fit md:w-auto">
+          <div className="mt-0 bg-[#FCC729] py-2 px-4 rounded-full flex flex-wrap items-center justify-center gap-4 shadow-md z-10 w-fit md:w-auto">
             <Image src="/images/pm_bni.png" alt="BNI" width={24} height={24} className="w-8 h-8 object-contain" />
             <Image src="/images/pm_bca.png" alt="BCA" width={24} height={24} className="w-8 h-8 object-contain" />
             <Image src="/images/pm_mandiri.png" alt="Mandiri" width={24} height={24} className="w-8 h-8 object-contain" />
