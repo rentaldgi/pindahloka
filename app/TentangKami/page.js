@@ -62,7 +62,7 @@ export default function Testimonials() {
               <div className="flex items-start justify-between gap-4">
                 <p className="text-sm text-gray-700 leading-relaxed flex-1">{aboutCards[currentIndex].text}</p>
                 <Image
-                  src="/images/logo_pixel.png"
+                  src="/images/logo.png"
                   alt="Logo"
                   width={56}
                   height={56}
@@ -106,7 +106,7 @@ export default function Testimonials() {
                   <div className="flex items-start justify-between gap-4">
                     <p className="text-sm text-gray-700 flex-1 leading-relaxed">{item.text}</p>
                     <Image
-                      src="/images/logo_pixel.png"
+                      src="/images/logo.png"
                       alt="Logo"
                       width={56}
                       height={56}
