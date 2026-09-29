@@ -84,8 +84,8 @@ useEffect(() => {
             {[
               ["icon_pelayanan.png", "Pelayanan Terbaik"],
               ["icon_keamanan.png", "Keamanan Terjaga"],
-              ["icon_perawatan.png", "Tersedia Diberbagai Kota"],
-              ["icon_truk.png", "Antar Kemana Saja"],
+              ["icon_perawatan.png", "Tim Profesional"],
+              ["icon_truk.png", "Pindahan dalam & luar kota"],
             ].map(([icon, label], i) => (
               <div key={i} className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
                 <Image src={`/images/${icon}`} alt={label} width={40} height={40} className="w-8 sm:w-10 h-8 sm:h-10" />
