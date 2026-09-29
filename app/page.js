@@ -192,7 +192,7 @@ useEffect(() => {
       <section className="bg-[#FCC729] text-black px-3 sm:px-6 md:px-8 py-8 sm:py-12">
         <div className="w-[90%] md:w-[88%] mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center leading-tight">
-            Kenapa Harus Memilih Pixelnesia?
+            Kenapa Harus Memilih Pindahloka?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             {[
